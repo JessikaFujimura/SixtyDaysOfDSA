@@ -1,7 +1,7 @@
 public class Principal {
     
     public static void main(String[] args){
-        TwoSum twoSum = new TwoSum(5, new int[]{1,2,3,4,0,5});
+        TwoSum twoSum = new TwoSum(8, new int[]{1,2,3,4,0,5});
         int[] pos = twoSum.sumTwo();
         for(int x: pos) {
             System.out.print(x);

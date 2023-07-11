@@ -1,3 +1,5 @@
+import java.util.HashMap;
+
 public class TwoSum {
 
     private int target;
@@ -9,17 +11,15 @@ public class TwoSum {
     }
 
     public int[] sumTwo(){
-        int[] result = new int[2];
+        HashMap<Integer, Integer> result = new HashMap<>();
         for(int i = 0; i < this.nums.length; i++) {
             int rest = this.target - nums[i];
-            for(int j = 0; j < this.nums.length && j != i; j++ ) {
-                if(nums[j] == rest) {
-                    result[1] = j;
-                }
+            if(result.containsKey(rest)){
+                return new int[] {result.get(rest), i};
             }
-            result[0] = i;
+            result.put(nums[i], i);
         }
-        return result;
+        return new int[0];
     }
 
 }
