@@ -4,7 +4,7 @@
 // You can return the answer in any order.
 
 const nums = [1,2,3,4,0,5];
-const target = 7;
+const target = 5;
 
 function sumTwo(nums, target){
     let result;
